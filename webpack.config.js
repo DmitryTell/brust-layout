@@ -1,0 +1,48 @@
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+
+module.exports = {
+    entry: path.resolve(__dirname, "src", "main.js"),
+    mode: process.env.NODE_ENV === "production" ? "production" : "development",
+    module: {
+        rules: [
+            {
+                test: /\.pug$/,
+                use: ["pug-loader"],
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                  MiniCssExtractPlugin.loader,
+                  'css-loader',
+                  'sass-loader'
+                ]
+            },
+        ],
+    },
+    devtool:
+        process.env.NODE_ENV === "production"
+            ? "hidden-source-map"
+            : "source-map",
+    output: {
+        path: path.resolve(__dirname, "build"),
+        filename: "[name].[contenthash].js",
+        clean: true,
+    },
+    plugins: [
+        new webpack.ProgressPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "public", "index.pug"),
+        }),
+        new CopyPlugin({
+            patterns: [{ from: "public", to: "public" }],
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].[contenthash].css",
+        }),
+    ],
+};
