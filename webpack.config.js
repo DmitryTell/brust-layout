@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 
 module.exports = {
@@ -24,6 +25,9 @@ module.exports = {
             },
         ],
     },
+    optimization: {
+        minimizer: ["...", new CssMinimizerPlugin()],
+    },
     devtool:
         process.env.NODE_ENV === "production"
             ? "hidden-source-map"
@@ -41,8 +45,6 @@ module.exports = {
         new CopyPlugin({
             patterns: [{ from: "public", to: "public" }],
         }),
-        new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css",
-        }),
+        new MiniCssExtractPlugin(),
     ],
 };

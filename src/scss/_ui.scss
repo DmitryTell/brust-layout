@@ -1,0 +1,14 @@
+.button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    font-weight: $semibold;
+    font-size: $medium;
+    line-height: $lh-medium;
+    color: $white;
+
+    &--blue {
+        background-color: $blue;
+    }
+}
