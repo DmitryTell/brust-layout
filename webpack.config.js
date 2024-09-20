@@ -7,7 +7,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 
 module.exports = {
-    entry: path.resolve(__dirname, "src", "main.js"),
+    entry: path.resolve(__dirname, "src", "index.js"),
     mode: process.env.NODE_ENV === "production" ? "production" : "development",
     module: {
         rules: [

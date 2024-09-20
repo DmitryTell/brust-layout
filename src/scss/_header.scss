@@ -1,0 +1,50 @@
+.header {
+    width: 100%;
+    min-height: 88px;
+    background-color: $white;
+    border-bottom: 1px solid $gray-light;
+
+    &__container {
+        max-width: 1512px;
+        margin: 0 auto;
+        padding: 20px $side-padding;
+    }
+
+    &__menu {
+        min-height: 48px;
+        display: grid;
+        grid-template-columns: 1fr 4fr 148px 189px;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .menu {
+        &__links {
+            display: flex;
+            gap: 12px;
+        }
+
+        &__phone-box {
+            padding: 5px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        &__hot-line {
+            font-weight: $weight-medium;
+            font-size: $small-extra;
+            line-height: $lh-small-extra;
+            letter-spacing: -0.4px;
+            color: $gray-dark;
+        }
+
+        &__phone {
+            font-weight: $weight-medium;
+            font-size: $link;
+            line-height: $lh-medium;
+            letter-spacing: -0.4px;
+        }
+    }
+}

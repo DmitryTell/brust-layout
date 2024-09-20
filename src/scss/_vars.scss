@@ -1,15 +1,32 @@
+// Constants
+$side-padding: calc(50% - 1064px / 2);
+
 // Colors
 $white: #FFF;
 $black: #000;
 $blue: #27AAE1;
+$blue-light: #1CBCFF;
+$blue-light-015: rgba(39, 170, 225, 0.15);
+$gradient-loader: #27AAE1 #D0E8F4;
+$gray-dark: #A4A4A4;
+$gray: #ECEFF0;
+$gray-light: #E9E9E9;
+$gray-light-extra: #F4F4F4;
+$gray-blue: #D2F2FF;
+$gray-blue-074: rgba(210, 242, 255, 0.74);
+$orange: #FB5607;
+$green: #22AC74;
 
 // Sizes
 $medium: 18px;
+$link: 15px;
+$small-extra: 12px;
 
 // Heights
 $lh-medium: 20px;
+$lh-small-extra: 14px;
 
 // Weights
-$regular: 400;
-$medium: 500;
-$semibold: 600;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;

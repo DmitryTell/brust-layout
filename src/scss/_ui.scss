@@ -3,12 +3,60 @@
     height: 48px;
     border: none;
     border-radius: 10px;
-    font-weight: $semibold;
+    font-weight: $weight-semibold;
     font-size: $medium;
     line-height: $lh-medium;
+    letter-spacing: -0.4px;
     color: $white;
+    transition: all 0.5s;
 
-    &--blue {
+    &--base {
         background-color: $blue;
+        color: $white;
+        letter-spacing: -0.3px;
+
+        &:hover {
+            background-color: $blue-light;
+        }
+    }
+
+    &--white {
+        background-color: $white;
+        color: $blue;
+
+        &:hover {
+            background-color: $gray-light-extra;
+        }
+    }
+
+    &--gray {
+        background-color: $gray-blue;
+        color: $blue;
+
+        &:hover {
+            background-color: $gray-blue-074;
+            border: 1px solid $blue;
+        }
+    }
+}
+
+.link {
+    padding: 6px 12px 7px;
+    border-radius: 8px;
+    font-weight: $weight-medium;
+    font-size: $link;
+    line-height: $lh-medium;
+    letter-spacing: -0.3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+        background-color: $gray;
+
+        & embed {
+            transform: rotate(-180deg);
+        }
     }
 }
