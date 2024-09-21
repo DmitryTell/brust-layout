@@ -4,6 +4,7 @@ $side-padding: calc(50% - 1064px / 2);
 // Colors
 $white: #FFF;
 $black: #000;
+$black-page: #0A0A0A;
 $blue: #27AAE1;
 $blue-light: #1CBCFF;
 $blue-light-015: rgba(39, 170, 225, 0.15);
@@ -18,11 +19,13 @@ $orange: #FB5607;
 $green: #22AC74;
 
 // Sizes
+$large-extra: 40px;
 $medium: 18px;
 $link: 15px;
 $small-extra: 12px;
 
 // Heights
+$lh-large-extra: 48px;
 $lh-medium: 20px;
 $lh-small-extra: 14px;
 

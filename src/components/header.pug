@@ -1,15 +1,12 @@
 header.header
     .header__container
-        nav.header__menu.menu 
-            div 
-                embed(src="../../public/icons/logo.svg" type="image/svg+xml")
-            .menu__links 
-                .link Продукты
-                    embed(src="../../public/icons/arrow.svg" type="image/svg+xml")
-                .link Заказчикам
-                .link Подрядчикам
-            .menu__phone-box 
-                span.menu__hot-line Горячая линия
-                span.menu__phone +7 (343) 385-91-61
-            div 
-                button.button.button--base Войти в систему
+        embed(src="../../public/icons/logo.svg" type="image/svg+xml")
+        nav.header__nav 
+            a(href="#").link Продукты
+                embed(src="../../public/icons/arrow.svg" type="image/svg+xml")
+            a(href="#").link Заказчикам
+            a(href="#").link Подрядчикам
+        .header__phone
+            span.header__hot-line Горячая линия
+            span.header__number +7 (343) 385-91-61
+        button.button.button--base Войти в систему
