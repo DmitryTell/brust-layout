@@ -1,0 +1,47 @@
+.main {
+    width: 100%;
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+    color: $black-page;
+
+    &__container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    &__consult {
+        width: 825px;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .consult {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__title {
+            width: 730px;
+            font-weight: $weight-semibold;
+            font-size: $large-extra;
+            line-height: $lh-large-extra;
+            letter-spacing: -4%;
+        }
+
+        &__description {
+            width: 553px;
+            font-weight: $weight-medium;
+            font-size: $medium;
+            line-height: $lh-large;
+            letter-spacing: -0.3px;
+        }
+
+        &__button {
+            width: 249px;
+        }
+    }
+}

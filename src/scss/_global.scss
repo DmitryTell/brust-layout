@@ -5,7 +5,13 @@
 }
 
 body {
+    position: relative;
     font-family: Manrope;
+    scrollbar-width: 0;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 }
 
 input {

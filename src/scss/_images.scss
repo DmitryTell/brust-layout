@@ -1,3 +1,17 @@
+.mac {
+    position: relative;
+    width: 100%;
+    padding-top: 84px;
+    display: flex;
+    justify-content: center;
+
+    &__phone {
+        position: absolute;
+        top: -114px;
+        right: -228px;
+    }
+}
+
 .bg-img-top {
     position: absolute;
     top: 32px;
